@@ -1,0 +1,260 @@
+
+Day 1
+======
+Webapps 
+--------
+  1. Server Side Rendering Apps (SSR) / Traditional Webapps 
+      * Pages will refresh / reload 
+
+      Codebase 
+      ---------
+        index.php
+          HTML, CSS, JS + Back End (PHP) + DB Query (SQL)
+
+        about.php
+          HTML, CSS, JS + Back End (PHP) + DB Query (SQL)
+
+      Server 
+      ------- 
+        1 Server 
+        * port number 8080 
+        * localhost:8080/index.php 
+
+        Response: HTML, CSS, JS + Data
+
+      Adv 
+      ----
+        1. Search Engine Friendly 
+        2. Initial Loading will NOT take more time
+
+      Disadv 
+      -----
+        1. Server has to do the heavy-lifting of going thru front end codes also
+        2. Slower Webapps 
+        3. Bandwidth consumption is more
+        4. Expensive 
+        5. Bad Developer Experience 
+        6. Bad User Experience
+
+  2. Client Side Rendering Apps (CSR) / Modern Webapps = SPA + RESTful API
+      * Pages will NOT refresh / reload 
+
+      Codebase 
+      ---------
+        2 Apps 
+        -------
+          1 Front End App a.k.a Single Page Apps (SPA)
+              HTML, CSS, JS 
+
+          1 Back End App a.k.a RESTful API
+              Back End (NodeJS, ExpressJS) + DB Query (MongoDB / SQL)
+
+      Servers 
+      ------- 
+        1 Server for the Front End App 
+          * port number: 4000
+          * Requesting: localhost:4000   (publicly exposed)
+
+            Response: HTML, CSS, JS, (without Data)
+          
+        1 Server for the Back End App 
+          * port number: 8081
+          * Requesting: localhost:8081/users
+          
+            Response: Data (JSON)
+
+      Adv 
+      ----
+        1. Workload is shared between 2 servers.
+        2. Faster Webapps 
+        3. Bandwidth consumption is less
+        4. Less Expensive 
+        5. Better Developer Experience 
+        6. Better User Experience
+
+      Disadv 
+      ----
+        1. NOT Search Engine Friendly (can be fixed -- We Won't do)
+        2. Initial Loading will take longer (can be fixed -- We will do)
+
+
+Browser
+-------
+  * HTML Renderer 
+  * CSS Parser 
+  * JS Engine 
+
+
+Single Page Apps (SPA)
+----------------------
+  7 Characteristics 
+  ------------------
+    1. Pages should NOT reload 
+    2. URL should change 
+    3. History should be maintained w/o Page refresh 
+    4. Header and Footer should NOT be loaded again and again
+    5. In b/w header and footer -- contextual updates should show up 
+    6. Active Menu should be set
+    7. Page title should change
+
+  SPA Frameworks / Libraries
+  ---------------------------
+    #1 React JS (library)
+    #2 Angular 2+ (Framework)
+    #3 VueJS (Framework)
+    #4 Svelte (Framework)
+
+
+Course Projects
+------
+  App #1 in React JS 
+  App #2 in Redux Toolkit 
+
+  App #3 in NodeJS (SSR)
+  App #4 in NodeJS (RESTful API)
+  App #5 in NodeJS (Video Conferencing App + Chat App)
+
+  2 Books 
+
+=================================
+
+2 Types of Languages by Data Typing 
+------------------------
+  1. Strictly-Typed Languages 
+      Examples: Java, C#
+
+      Syntax: 
+        String myName = "Arun"; 
+        myName = "John"; // valid
+        myName = 100; // error 
+        int x = 10;
+        x = "Arun"; // error 
+
+
+  2. Loosely-Typed Languages 
+      Examples: JavaScript, PHP, Python 
+
+      Syntax in JS 
+      -----
+        var myName = "Arun"; //valid
+        myName = "John"; // valid 
+        myName = 10; // valid 
+        myName = true; //valid
+        myName = []; //valid
+        myName = {}; //valid
+        myName = undefined; //valid
+        myName = null; //valid
+        myName = function() {} //valid
+
+Data Types in JS
+----------
+  1. Primitive Data Types 
+      string, number, boolean, undefined, null, symbol (ES2015), big int (ES2017)
+
+  2. Non-Primitive Data Types / Reference Types
+      Object, Array, RegEx 
+
+
+Day 2
+======
+3 Layers to develop website / webapps 
+----
+  1. Structural Layer 
+      HTML 
+  2. Presentation Layer 
+      CSS
+  3. Interaction Layer 
+      JavaScript
+
+
+HTML 
+-----
+  * Standard 
+  * Maintained by W3C
+
+CSS 
+----
+  * Standard 
+  * Maintained by W3C
+
+ECMAScript
+-------
+  * Standard 
+  * Grammar 
+  * Maintained by ECMA International
+  * Implementations: JavaScript, JScript, ActionScript, Google AppsScript, QtScript
+
+  ES Before June 2015
+  -------
+    * It was NOT Object Oriented Programming Language
+    * no class, no extends, no import, no export
+  
+  ES After June 2015 (ES2015)
+  -------
+    * It has become Object Oriented Programming Language
+    * class, extends, import, export
+
+------------------
+
+Todos
+=====
+  1. Learn about JSON stringify and JSON parse 
+  2. Learn about duplicating object 
+    Ref: https://code.tutsplus.com/the-best-way-to-deep-copy-an-object-in-javascript--cms-39655a
+
+  3. Have an object in const and try changing its' properties 
+  4. Have an array in const and try changing its' indices 
+  5. Learn about using spread operator in an object to duplicate
+  6. Learn about promise 
+
+Refer: https://leanpub.com/understandinges6/read 
+
+
+
+Day 4:
+=======
+Webapps
+Desktop Apps 
+Mobile Apps 
+Tablet Apps 
+TV Apps 
+Smartwatch Apps 
+
+Installable Webapps = Progressive Web App (PWA)
+---
+  * Installable in Mac or Windows or Linux 
+  * Installable in Android Mobiles and Tablets 
+  * Not Installable in iPhone and iPad 
+
+=====
+Think in React 
+-------------
+  1. Identifying the number of components 
+  2. Identifying the hierarchy of the components
+  3. ...
+  4. ...
+
+Components
+---------
+  * Reusable block of code made with JS, JSX and CSS (optional)
+  1. Functional Components  (RECOMMENDED)
+      * made with JS functions
+      * were called as dumb components / presentational components (before react v 16.8)
+      * were called as stateless components (before react v 16.8)
+      * no longer called as stateless/presentational/dumb components
+
+      1.1 FC with Named Fn 
+      1.2 FC with Anonymous Fn 
+      1.3 FC with Arrow Fn 
+
+  2. Class Components (NOT RECOMMENDED -- We will NOT write. We will NOT LEARN)
+      * made with JS class 
+      * were called as smart components / containers (before react v 16.8)
+      * were called as stateful components (before react v 16.8)
+      * no longer called as stateful/containers/smart components
+
+      
+Project Structure
+---------------
+  src/
+    components/
