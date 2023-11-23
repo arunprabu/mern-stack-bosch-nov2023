@@ -1,0 +1,60 @@
+NPM Packages
+--
+  * default packages
+  * third-party packages 
+  
+  Package Management with NPM
+  -----
+    1. Search for packages 
+    2. Installing with command
+    2. Updating with command
+    3. Uninstalling with command
+
+  3 Players 
+  ---------
+    1. Package Developers 
+    2. npmjs Marketplace for Package 
+    3. Web Developers
+
+  -------
+
+NodeJS Ecosystem
+---------
+  Dependencies
+  ------------
+    1. Project Dependencies
+        * some packages are needed for the functionality of the app to work 
+        * Examples: jquery, bootstrap, react, axios, dropzone, datatables.net 
+        * How to Install?
+          npm i jquery (or)
+          npm install jquery (or)
+          npm i jquery --save (or)
+          npm i jquery -S 
+
+          Can be seen in package.json 
+          "dependencies": {
+            "dropzone": "^6.0.0-beta.2",
+            "jquery": "^3.7.1"
+          },
+
+    2. Development Dependencies
+        * some packages are needed for the development of the app
+        * Examples: typescript, sass, less, webpack, mocha, chai 
+        * How to install?
+          npm i webpack --save-dev  (or)
+          npm install webpack --save-dev  (or)
+          npm i webpack -D  (or)
+
+           Can be seen in package.json 
+            "devDependencies": {
+              "webpack": "^5.89.0"
+            }
+
+--------------------------------
+
+Proxy related commands to try
+---
+  npm config rm proxy
+  npm config rm https-proxy
+
+==================
