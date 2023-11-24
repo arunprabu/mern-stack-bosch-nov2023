@@ -244,8 +244,8 @@ Components
       * no longer called as stateless/presentational/dumb components
 
       1.1 FC with Named Fn [DONE]
-      1.2 FC with Anonymous Fn 
-      1.3 FC with Arrow Fn 
+      1.2 FC with Anonymous Fn [DONE]
+      1.3 FC with Arrow Fn [DONE]   (RECOMMENDED)
 
   2. Class Components (NOT RECOMMENDED -- We will NOT write. We will NOT LEARN)
       * made with JS class 
@@ -253,15 +253,92 @@ Components
       * were called as stateful components (before react v 16.8)
       * no longer called as stateful/containers/smart components
 
-      
+JSX Limitations 
+-------
+  * Will look like HTML. But really not.
+  * All tags must be self-closed or separately-closed 
+  * class attribute in element should become className
+
+
 Project Structure
 ---------------
   src/
     components/
 
-
-Naming and Casing Conventions 
----------------------------
-
-Formatting the code 
+Naming Conventions
 ------------------
+  Refer: https://www.freecodecamp.org/news/clean-coding-for-beginners/
+
+  Casing Types 
+  --------
+    1. PascalCase 
+        * Recommended for Object Oriented Program's classes 
+        * also Recommended for Interface in TypeScript 
+        * Recommended for React Components and the folder of Components
+
+        examples 
+        ---
+          class CarDetails {
+
+          }
+
+          interface Employee {
+
+          }
+
+          const MenuList() => {
+            return (<p>some jsx</p>)
+          }
+
+    2. camelCase 
+        * Recommended for variables, let, const, functions, methods in JS & TS 
+        * Recommended for id's of html elements 
+        * Recommended for variables, const, fn, methods, event handlers of React Component
+        
+        examples 
+        -----
+          var myCar = 'BMW';
+          var isLoggedIn = true;
+
+          function getCarInfo() {
+            //....
+          }
+
+          function add() {
+
+          }
+    
+    3. kebab-case
+        * Recommended for URLs 
+        * Recommended for file names, folder names, assets in front end projects  
+        * Recommended for css classes 
+        * okay for id's of html elements if your architect says ok
+
+        examples 
+        -----
+          btn-primary
+          slideshow-container 
+          youtube-logo.png 
+
+    4. snake_case 
+        * never ever use this. 
+        * okay for const in JS & TS if architect accepts
+
+        examples
+        ---
+          const MAX_STUDENTS_PER_CLASS = 30;
+
+----------------
+
+Core Concepts of React
+=======
+  Props 
+  States 
+  Events 
+  Conditional Rendering 
+  Lists & Keys 
+  Styling in React Components 
+
+Advanced Topics
+---------
+  Routing 

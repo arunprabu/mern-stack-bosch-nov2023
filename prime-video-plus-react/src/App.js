@@ -15,7 +15,9 @@ function App() {
   return (
     <div>
       <Header></Header>
-      <h1>Success!</h1>
+      <main className="container mt-5 pt-2">
+        <h1>Success!</h1>
+      </main>
       <Footer />
     </div>
   );

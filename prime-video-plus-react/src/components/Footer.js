@@ -1,10 +1,13 @@
+import MenuList from "./MenuList";
+
 // FC with anonymous fn
 const Footer = function () {
   // must return JSX
   return (
-    <footer>
+    <footer className="text-center">
       <hr />
-      <p>Copyright 2023</p>
+      <MenuList />
+      <p>&copy; Copyright 2023 | Arun</p>
     </footer>
   );
 };
