@@ -4,7 +4,9 @@
   * export
 */
 
+// ideal place for you have layout
 import Header from "./components/Header";
+import Footer from './components/Footer';
 
 // Functional Component with Named Function
 function App() {
@@ -14,6 +16,7 @@ function App() {
     <div>
       <Header></Header>
       <h1>Success!</h1>
+      <Footer />
     </div>
   );
 }
