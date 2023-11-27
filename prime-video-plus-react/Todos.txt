@@ -1,1 +1,3 @@
 1. integrate bootstrap in create-react-app based project 
+2. setup active menu in MenuList.js using react-router-dom 
+3. setup page title using react-helmet-async 

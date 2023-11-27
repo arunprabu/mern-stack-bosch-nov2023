@@ -264,6 +264,21 @@ Project Structure
 ---------------
   src/
     components/
+      Header.js 
+      Footer.js 
+      MenuList.js 
+    pages/
+      HomePage/
+        HomePage.js
+      PrimeVideoPage/
+        PrimeVideoPage.js
+        components/
+          LatestVideo.js
+          TrendingVideo.js
+      AboutUsPage/
+        AboutUsPage.js 
+    
+    
 
 Naming Conventions
 ------------------
@@ -330,15 +345,140 @@ Naming Conventions
 
 ----------------
 
-Core Concepts of React
+Core Concepts of ReactJS
 =======
-  Props 
-  States 
-  Events 
+  Props [30 mins]
+  States [1.30 hours]
+  Events [1 hour]
   Conditional Rendering 
   Lists & Keys 
   Styling in React Components 
 
 Advanced Topics
 ---------
-  Routing 
+  Routing [DONE]
+  HOC 
+  Error boundary 
+  ... 
+  ...
+  ...
+  ...
+  Controlled Comp and uncontrolled components (will be explained in User Management )
+  Fragment
+  StrictMode
+
+  Forms (will be explained in User Management)
+  Context API (will be explained in Products with Add to Cart)
+
+
+
+Single Page Apps (SPA)
+----------------------
+  7 Characteristics 
+  ------------------
+    1. Pages should NOT reload 
+    2. URL should change [DONE]
+    3. History should be maintained w/o Page refresh 
+    4. Header and Footer should NOT be loaded again and again
+    5. In b/w header and footer -- contextual updates should show up [DONE]
+    6. Active Menu should be set
+    7. Page title should change
+
+
+Limitations of ReactJS 
+-----
+  1. Doesn't have tools to help make SPA. Use react-router-dom 
+  2. Doesn't have any tool to help connect to REST API. use axios or else fetch (native js) 
+  3. Doesn't offer any form and form validation related tools
+  4. For Most of the other things, you need to look for open source tools
+
+
+Routing in React JS 
+-------------------
+  Step 0
+  ------
+    Identify the Menus and also the URLs. Set them up in MenuList comp  
+
+    Home                      http://localhost:3000/
+    Prime Video               http://localhost:3000/prime-video
+    User Management           http://localhost:3000/users
+    Products                  http://localhost:3000/products
+    Todos App                 http://localhost:3000/todos
+    Unit Testing              http://localhost:3000/unit-testing-demo
+    About Us                  http://localhost:3000/about-us
+    Contact Us                http://localhost:3000/contact-us
+
+  Step 1:
+  ----
+    Check the app. URL is changed. Pages are still getting refreshed. 
+    Let's work on creating necessary components for the above URLs 
+
+    Create the following components for the Menus
+      Home                      HomePage Component 
+      Prime Video               PrimeVideoPage Component 
+      User Management           UserManagementPage Component
+      Products                  ProductsPage Component
+      Todos App                 TodosPage Component
+      Unit Testing              UnitTestingDemoPage Component
+      About Us                  AboutUsPage Component
+      Contact Us                ContactUsPage Component
+
+  Step 2:
+  -----
+    We need a third-party package to make it a SPA. 
+    npm i react-router-dom 
+
+    Let's seup react-router-dom in App.js 
+    Move the whole app under <BrowserRouter></BrowserRouter>
+
+  Step 3: 
+  -----
+    Let's Config the routes in between header and footer in App.js 
+
+     <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/prime-video" element={<PrimeVideoPage />} />
+        <Route path="/users" element={<UsersPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/todos" element={<TodosPage />} />
+        <Route path="/unit-testing-demo" element={<UnitTestingDemoPage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/contact-us" element={<ContactUsPage />} />
+      </Routes>
+
+  Step 4:
+  ----
+    Check the app. Components will be loaded properly. 
+
+    But, the pages will still refresh. Let's fix it.
+
+    Replace all <a href=''> tags with <Link to=''>
+
+  Step 5:
+  ------
+    Now, check the app. 
+      Pages Will NOT reload. 
+      History is maintained w/o Page refresh 
+      Header and Footer NOT loaded again and again
+
+    You have work on Setting the active menu and page title.
+
+
+
+Data Binding 
+------------
+  * keeping the data in variable in JS and displaying it in JSX
+
+Cross Component Communication
+-------
+  1. Parent to Child Component Communication [TO LEARN]
+      using props 
+
+  2. Child to Parent Component Communication [TODO]
+      using props, passing callback fn as prop to the child comp 
+
+  3. Any to Any Component Communication 
+      3.1 using Context API of React JS [TO LEARN]
+      3.2 using Redux-Toolkit [TO LEARN] / Zustand / MobX / Jotai / Recoil / Flux
+
+======

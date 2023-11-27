@@ -1,4 +1,5 @@
 // Header component
+import { Link } from "react-router-dom";
 import MenuList from "./MenuList";
 
 // Fn component with Named Fn
@@ -8,9 +9,9 @@ function Header() {
     <header>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             Prime Video Plus App
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,17 +25,9 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <MenuList />
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            <button type="button" className="btn btn-warning">
+              Cart (0)
+            </button>
           </div>
         </div>
       </nav>
