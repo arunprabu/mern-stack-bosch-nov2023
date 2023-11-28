@@ -3,7 +3,7 @@ import MenuList from "./MenuList";
 // FC with anonymous fn
 const Footer = function () {
   const copyrightYear = 2023;
-  const developerName = 'Arun';
+  const developerName = "Arun";
 
   // must return JSX
   return (

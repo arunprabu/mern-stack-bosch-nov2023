@@ -1,4 +1,5 @@
 import LatestVideoList from "./components/LatestVideoList";
+import TrendingVideoList from "./components/TrendingVideoList";
 
 const PrimeVideoPage = () => {
   return (
@@ -9,6 +10,7 @@ const PrimeVideoPage = () => {
 
       <hr />
       <h2>Trending Videos | States and Events Demo</h2>
+      <TrendingVideoList />
 
       <hr />
       <h2>

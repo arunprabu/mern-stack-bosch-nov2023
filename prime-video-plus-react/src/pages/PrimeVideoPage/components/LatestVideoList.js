@@ -45,8 +45,6 @@ const LatestVideoList = () => {
           {latestVideos[1].description}
         </LatestVideo>
       </div>
-      <div className="col-md-3">col 3</div>
-      <div className="col-md-3">col 4</div>
     </div>
   );
 };

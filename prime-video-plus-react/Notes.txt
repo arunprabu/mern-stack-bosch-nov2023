@@ -347,7 +347,7 @@ Naming Conventions
 
 Core Concepts of ReactJS
 =======
-  Props [30 mins]
+  Props [DONE]
   States [1.30 hours]
   Events [1 hour]
   Conditional Rendering 
@@ -371,7 +371,6 @@ Advanced Topics
   Context API (will be explained in Products with Add to Cart)
 
 
-
 Single Page Apps (SPA)
 ----------------------
   7 Characteristics 
@@ -383,7 +382,6 @@ Single Page Apps (SPA)
     5. In b/w header and footer -- contextual updates should show up [DONE]
     6. Active Menu should be set
     7. Page title should change
-
 
 Limitations of ReactJS 
 -----
@@ -462,7 +460,6 @@ Routing in React JS
       Header and Footer NOT loaded again and again
 
     You have work on Setting the active menu and page title.
-
 
 
 Data Binding 
