@@ -258,6 +258,7 @@ JSX Limitations
   * Will look like HTML. But really not.
   * All tags must be self-closed or separately-closed 
   * class attribute in element should become className
+  * JSX expressions must have one parent element.
 
 
 Project Structure
@@ -348,10 +349,10 @@ Naming Conventions
 Core Concepts of ReactJS
 =======
   Props [DONE]
-  States [1.30 hours]
-  Events [1 hour]
-  Conditional Rendering 
-  Lists & Keys 
+  States [DONE]
+  Events [DONE]
+  Conditional Rendering [DONE]
+  Lists & Keys [DONE]
   Styling in React Components 
 
 Advanced Topics
@@ -383,7 +384,8 @@ Single Page Apps (SPA)
     6. Active Menu should be set
     7. Page title should change
 
-Limitations of ReactJS 
+
+ations of ReactJS 
 -----
   1. Doesn't have tools to help make SPA. Use react-router-dom 
   2. Doesn't have any tool to help connect to REST API. use axios or else fetch (native js) 
@@ -468,7 +470,7 @@ Data Binding
 
 Cross Component Communication
 -------
-  1. Parent to Child Component Communication [TO LEARN]
+  1. Parent to Child Component Communication [DONE]
       using props 
 
   2. Child to Parent Component Communication [TODO]

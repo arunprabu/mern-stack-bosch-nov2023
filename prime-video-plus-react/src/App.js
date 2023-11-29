@@ -3,6 +3,7 @@
   * component definition
   * export
 */
+import './App.css';
 
 // ideal place for you have layout
 import Header from "./components/Header";
@@ -25,6 +26,7 @@ function App() {
     <BrowserRouter>
       <Header></Header>
       <main className="container mt-5 pt-2">
+        <p className='red-text'>wow</p>
         {/* Config the routes in between header and footer */}
         <Routes>
           <Route path="/" element={<HomePage />} />
