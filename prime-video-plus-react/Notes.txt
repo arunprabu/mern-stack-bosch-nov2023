@@ -278,7 +278,8 @@ Project Structure
           TrendingVideo.js
       AboutUsPage/
         AboutUsPage.js 
-    
+    routes/
+      AppRoutes.js 
     
 
 Naming Conventions
@@ -327,7 +328,7 @@ Naming Conventions
     3. kebab-case
         * Recommended for URLs 
         * Recommended for file names, folder names, assets in front end projects  
-        * Recommended for css classes 
+        * Recommended for css classes unless you are using css modules in react 
         * okay for id's of html elements if your architect says ok
 
         examples 
@@ -354,23 +355,27 @@ Core Concepts of ReactJS
   Conditional Rendering [DONE]
   Lists & Keys [DONE]
   Styling in React Components 
+    1. External Styles [DONE]
+    2. Internal Styles [DONE]
+    3. Inline Styles [DONE]
 
 Advanced Topics
 ---------
   Routing [DONE]
+  Controlled Comp and uncontrolled components (will be explained in User Management )
+  Forms (will be explained in User Management)
+  REST API Calls
   HOC 
   Error boundary 
   ... 
   ...
   ...
   ...
-  Controlled Comp and uncontrolled components (will be explained in User Management )
+  
   Fragment
   StrictMode
 
-  Forms (will be explained in User Management)
   Context API (will be explained in Products with Add to Cart)
-
 
 Single Page Apps (SPA)
 ----------------------
@@ -385,11 +390,11 @@ Single Page Apps (SPA)
     7. Page title should change
 
 
-ations of ReactJS 
+Limitations of ReactJS 
 -----
   1. Doesn't have tools to help make SPA. Use react-router-dom 
   2. Doesn't have any tool to help connect to REST API. use axios or else fetch (native js) 
-  3. Doesn't offer any form and form validation related tools
+  3. Doesn't offer any form and form validation related tools. use either react-hook-form (recommended) or formik
   4. For Most of the other things, you need to look for open source tools
 
 

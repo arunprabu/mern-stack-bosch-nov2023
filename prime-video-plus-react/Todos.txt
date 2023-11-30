@@ -6,15 +6,24 @@
 5. Create RecommendedVideo comp with card ui in it. 
   Use it in RecommendedVideoList comp and pass props into it and display the data 
   Pass the event handler handleManageWatchlist also as prop 
-  to the child comp and execture from child comp 
+  to the child comp and executee from child comp 
 6. Learn about styled components and try it out in AboutUsPage comp 
-
-
-
-
+7. Create src/routes/AppRoutes.js comp and move all your routing configurations there and 
+  use that in App.js 
+8. Learn about Nested Routing using react-router-dom v6 and implement it for the following 3 urls 
+    /about
+    /about/history 
+    /about/team
+    /about/careers
+9. Implement navigating users to different urls using react-router-dom wherever necessary 
+  (Try it after Friday's session)
+10. Implement React-hook-form based validation and form submission in AddUser comp
+  
 Peer Review for 1, 2, 3
 --------
-Sabhari Sree - Karthik Kannan, 
-Jones       - Manoj Kumar M P, 
-Revathi     - Subhash, Raghav
-Vignesh     - Ibrahim, Bandhesh
+Sabhari Sree - Karthik Kannan (GOT REVIEWED)
+Jones       - Manoj Kumar M P (GOT REVIEWED -- but not a regular attendee)
+Revathi     - Subhash (NOT REVIEWED), Raghav (NOT REVIEWED)
+Vignesh     - Ibrahim  (NOT REVIEWED), Bandhesh (NOT REVIEWED)
+
+

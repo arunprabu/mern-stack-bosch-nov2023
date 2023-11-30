@@ -1,13 +1,13 @@
-/* App is a Component 
-  * imports (optional)
-  * component definition
-  * export
-*/
-import './App.css';
+/* App is a Component
+ * imports (optional)
+ * component definition
+ * export
+ */
+import "./App.css";
 
 // ideal place for you have layout
 import Header from "./components/Header";
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import PrimeVideoPage from "./pages/PrimeVideoPage/PrimeVideoPage";
@@ -17,6 +17,8 @@ import TodosPage from "./pages/TodosPage/TodosPage";
 import UnitTestingDemoPage from "./pages/UnitTestingDemoPage/UnitTestingDemoPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
+import AddUser from "./pages/UsersPage/components/AddUser";
+import UserDetails from "./pages/UsersPage/components/UserDetails";
 
 // Functional Component with Named Function
 function App() {
@@ -26,12 +28,13 @@ function App() {
     <BrowserRouter>
       <Header></Header>
       <main className="container mt-5 pt-2">
-        <p className='red-text'>wow</p>
         {/* Config the routes in between header and footer */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/prime-video" element={<PrimeVideoPage />} />
           <Route path="/users" element={<UsersPage />} />
+          <Route path="/users/add" element={<AddUser />} />
+          <Route path="/users/1" element={<UserDetails />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/todos" element={<TodosPage />} />
           <Route path="/unit-testing-demo" element={<UnitTestingDemoPage />} />

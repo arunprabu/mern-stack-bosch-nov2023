@@ -52,7 +52,7 @@ const RecommendVideoList = () => {
     );
   }
 
-  const handleManageWatchlist = (index) => { 
+  const handleManageWatchlist = (index) => {
     // receive index as param
     console.log(index);
     // Update the state immutably
@@ -68,8 +68,7 @@ const RecommendVideoList = () => {
       {recommendedVideos.map((video, index) => {
         return (
           <div className="col-md-3" key={video.id}>
-            <div
-              className="card">
+            <div className="card">
               <img
                 src={video.thumbnailUrl}
                 className="card-img-top"
