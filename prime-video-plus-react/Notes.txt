@@ -375,6 +375,7 @@ Advanced Topics
   StrictMode [DONE]
   Context API (will be explained in Products with Add to Cart)
   Unit Testing 
+  Redux - Toolkit (2 hours)
 
 Single Page Apps (SPA)
 ----------------------
