@@ -49,6 +49,8 @@ const AddUser = () => {
           <label htmlFor="nameInput" className="form-label">
             Name
           </label>
+          {/* An input form element whose value is controlled by React in this 
+          way is called a “controlled component”. */}
           <input
             type="text"
             className="form-control"

@@ -1,16 +1,16 @@
-1. integrate bootstrap in create-react-app based project 
-2. setup active menu in MenuList.js using react-router-dom 
-3. setup page title using react-helmet-async 
-4. Create TrendingVideo comp with card ui in it. 
+1. integrate bootstrap in create-react-app based project [DONE]
+2. setup active menu in MenuList.js using react-router-dom [DONE]
+3. setup page title using react-helmet-async [DONE]
+4. Create TrendingVideo comp with card ui in it. [DONE]
   Use it in TrendingVideoList comp and pass props into it and display
 5. Create RecommendedVideo comp with card ui in it. 
   Use it in RecommendedVideoList comp and pass props into it and display the data 
   Pass the event handler handleManageWatchlist also as prop 
   to the child comp and executee from child comp 
-6. Learn about styled components and try it out in AboutUsPage comp 
+6. Learn about styled-components and try it out in AboutUsPage comp 
 7. Create src/routes/AppRoutes.js comp and move all your routing configurations there and 
   use that in App.js 
-8. Learn about Nested Routing using react-router-dom v6 and implement it for the following 3 urls 
+8. Learn about Nested Routing using react-router-dom v6 and implement it for the following 3 urls (will review on monday)
     /about
     /about/history 
     /about/team
@@ -18,7 +18,19 @@
 9. Implement navigating users to different urls using react-router-dom wherever necessary 
   (Try it after Friday's session)
 10. Implement React-hook-form based validation and form submission in AddUser comp
-  
+    * all 3 fields are required 
+    * phone number should be of max 10 digits 
+    * email should be valid 
+    * disable the submit button if form is invalid
+    * if success - clear the form fields 
+    * if error - do not clear the form fields
+
+11. Change the label of submit button to 'Creating User...' when clicked in AddUser comp 
+12. Show success message or error message of form submission in toasts such as react-toastify or react-hot-toast
+
+
+
+
 Peer Review for 1, 2, 3
 --------
 Sabhari Sree - Karthik Kannan (GOT REVIEWED)

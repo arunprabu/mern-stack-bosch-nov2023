@@ -241,7 +241,7 @@ Components
       * made with JS functions
       * were called as dumb components / presentational components (before react v 16.8)
       * were called as stateless components (before react v 16.8)
-      * no longer called as stateless/presentational/dumb components
+      * no longer called as stateless/presentational/dumb components after hooks introduced
 
       1.1 FC with Named Fn [DONE]
       1.2 FC with Anonymous Fn [DONE]
@@ -260,11 +260,10 @@ JSX Limitations
   * class attribute in element should become className
   * JSX expressions must have one parent element.
 
-
 Project Structure
 ---------------
   src/
-    components/
+    components or layouts
       Header.js 
       Footer.js 
       MenuList.js 
@@ -277,10 +276,14 @@ Project Structure
           LatestVideo.js
           TrendingVideo.js
       AboutUsPage/
+        components/ or views/
+          History.js
+          Team.js
+          Career.js
         AboutUsPage.js 
     routes/
       AppRoutes.js 
-    
+
 
 Naming Conventions
 ------------------
