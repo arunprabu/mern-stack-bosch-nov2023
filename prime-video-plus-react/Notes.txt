@@ -365,19 +365,14 @@ Core Concepts of ReactJS
 Advanced Topics
 ---------
   Routing [DONE]
-  Controlled Comp and uncontrolled components (will be explained in User Management )
-  Forms (will be explained in User Management)
-  REST API Calls
+  Controlled Comp [DONE]
+  uncontrolled components 
+  Forms [DONE]
+  REST API Calls [DONE]
   HOC 
   Error boundary 
-  ... 
-  ...
-  ...
-  ...
-  
-  Fragment
-  StrictMode
-
+  Fragment [DONE]
+  StrictMode [DONE]
   Context API (will be explained in Products with Add to Cart)
 
 Single Page Apps (SPA)

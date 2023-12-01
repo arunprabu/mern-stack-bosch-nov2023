@@ -27,6 +27,11 @@
 
 11. Change the label of submit button to 'Creating User...' when clicked in AddUser comp 
 12. Show success message or error message of form submission in toasts such as react-toastify or react-hot-toast
+13. Implement Go Back in create User and also in user Details -- DO NOT use Link tag 
+    search query: how to navigate to some other url in react using react-router-dom v6 
+14. Work on updating user in the url 'users/1/edit' - Http method: PUT 
+15. Work on deleting user in the url 'users/1' - Http method: DELETE 
+    * after 3 seconds of showing succes message -- redirect to users page
 
 
 
