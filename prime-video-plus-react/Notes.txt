@@ -489,3 +489,10 @@ Cross Component Communication
       3.2 using Redux-Toolkit [TO LEARN] / Zustand / MobX / Jotai / Recoil / Flux
 
 ======
+Hooks
+======
+  * In react Hooks are functions 
+  * Hooks will have 'use' prefix 
+  * Rules of Hooks
+    * Only Call Hooks at the Top Level
+    * Only Call Hooks from React Functional components

@@ -18,7 +18,8 @@ const AppRoutes = () => {
       <Route path="/prime-video" element={<PrimeVideoPage />} />
       <Route path="/users" element={<UsersPage />} />
       <Route path="/users/add" element={<AddUser />} />
-      <Route path="/users/1" element={<UserDetails />} />
+      {/* Let's work with URL param (userId) -- for dynamic urls */}
+      <Route path="/users/:userId" element={<UserDetails />} />
       <Route path="/products" element={<ProductsPage />} />
       <Route path="/todos" element={<TodosPage />} />
       <Route path="/unit-testing-demo" element={<UnitTestingDemoPage />} />
