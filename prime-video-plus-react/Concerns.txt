@@ -1,7 +1,19 @@
-Particpants who are attending on time or after an hour 
+Particpants who are NOT attending on time or after an hour 
 ------------
   Ibrahim 
   Bandhesh 
   Raghav 
 
 ========
+
+Not doing the handson 
+  Karthikeyan 
+  Ibrahim  - is absent it seems. Check whether he is attending for attending sake.
+  Bandesh - left the meeting today (Mon 4th Dec 2023) to attend another meeting. 
+  Subhash - not doing the hands-on citing machine issue as reason.
+
+  on Monday 4th Dec - many participants didn't attend the session.
+
+  Jones - who was an active listener so far has today failed to showcase proper output. 
+
+  

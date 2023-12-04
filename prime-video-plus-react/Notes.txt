@@ -493,3 +493,14 @@ Hooks
   * Rules of Hooks
     * Only Call Hooks at the Top Level
     * Only Call Hooks from React Functional components
+
+Context API to share data across the app 
+------
+  Step 1: create the context for the feature by using createContext() 
+  Step 2: export the context so that it can be used as a layer to share the data across many components in the app 
+          // try this is App.js 
+  Step 3: supply the data into the context through the provider 
+  Step 4: get the data using useContext() hook in the necessary component 
+  Step 5: if any comp wants to share the data through the context provider -- it can do it. 
+
+

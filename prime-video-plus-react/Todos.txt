@@ -32,7 +32,7 @@
 14. Work on updating user in the url 'users/1/edit' - Http method: PUT 
 15. Work on deleting user in the url 'users/1' - Http method: DELETE 
     * after 3 seconds of showing succes message -- redirect to users page
-
+16. fetch products from rest api in Products comp
 
 
 
