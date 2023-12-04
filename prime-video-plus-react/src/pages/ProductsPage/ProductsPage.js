@@ -1,8 +1,11 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
+  const { cartItems, addToCart } = useContext(CartContext);
+  console.log(cartItems);
 
   // API Url: https://fakestoreapi.com/products
   useEffect(() => {
@@ -21,7 +24,8 @@ const ProductsPage = () => {
 
   const handleAddToCart = (product) => {
     console.log(product);
-  }
+    addToCart([...cartItems, product]);
+  };
 
   return (
     <div className="row">
