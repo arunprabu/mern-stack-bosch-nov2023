@@ -366,15 +366,15 @@ Advanced Topics
 ---------
   Routing [DONE]
   Controlled Comp [DONE]
-  uncontrolled components 
+  uncontrolled components [1.25 hours -- with useReducer and useRef]
   Forms [DONE]
   REST API Calls [DONE]
-  HOC 
-  Error boundary 
+  HOC [40 mins]
+  Error boundary [10 mins]
   Fragment [DONE]
   StrictMode [DONE]
-  Context API (will be explained in Products with Add to Cart)
-  Unit Testing 
+  Context API [DONE]
+  Unit Testing [2-3 hours]
   Redux - Toolkit (2 hours)
 
 Single Page Apps (SPA)
@@ -501,6 +501,13 @@ Context API to share data across the app
           // try this is App.js 
   Step 3: supply the data into the context through the provider 
   Step 4: get the data using useContext() hook in the necessary component 
-  Step 5: if any comp wants to share the data through the context provider -- it can do it. 
+  Step 5: if any comp wants to share the data through the context provider 
+  
+==================
 
+
+Errors in React JS 
+---
+  1. Compilation error 
+  2. Runtime error
 

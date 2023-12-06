@@ -9,6 +9,7 @@ import "./App.css";
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import { BrowserRouter } from "react-router-dom";
+import { ErrorBoundary } from "react-error-boundary";
 import AppRoutes from "./routes/AppRoutes";
 import { CartProvider } from "./contexts/CartContext";
 
@@ -25,7 +26,15 @@ function App() {
           <AppRoutes />
         </main>
       </CartProvider>
-      <Footer />
+      <ErrorBoundary
+        fallback={
+          <div className="alert alert-danger">
+            Some Error occured. Try again later!
+          </div>
+        }
+      >
+        <Footer />
+      </ErrorBoundary>
     </BrowserRouter>
   );
 }
