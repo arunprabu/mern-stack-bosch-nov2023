@@ -366,7 +366,7 @@ Advanced Topics
 ---------
   Routing [DONE]
   Controlled Comp [DONE]
-  uncontrolled components [1.25 hours -- with useReducer and useRef]
+  uncontrolled components [DONE]
   Forms [DONE]
   REST API Calls [DONE]
   HOC [DONE]
@@ -516,3 +516,49 @@ Higher Order Component (HOC)
 ----
   * it is a function that takes in SourceComponent and returns a New Component 
   * it is a pattern 
+
+=====
+
+SDLC 
+----
+Analyse Requirements => Design => Dev => QA => Deployment => Maintain 
+
+Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (QA PASSED) => Deployment 
+
+
+Dev 
+----
+  Source Document: FRD, LLD, HLD, UX Designs
+  Test Cases: 
+    1. add should work with only number -- it can receive params in the form of numbers 
+    2. add must return number 
+    3. add button should be disabled if other than numbers entered 
+
+    function add(a, b){
+      if(typeof a === 'number' && typeof b === 'number'){
+        return a + b;
+      }
+    }
+
+    add(10, 20); // 30   
+    add(10, "30"); // 
+    add("10", "30"); // 
+
+
+Modern Approach 
+====  
+  Dev should write test cases => Dev should write the code => (TOOLS) => (0 bugs) => Deployment 
+
+Automated Testing 
+-----
+  0. Static Type Checking (prop-types or typescript)
+  1. Unit Testing 
+      * testing the functional code by writing some code
+      * testing tiny, independent unit of the code
+      * testing the component in isolation (w/o connecting to rest api) 
+      * tools: 
+        1. JEST (Unit testing framework and also a TEST RUNNER), 
+        2. React Testing Library (RTL -- testing utility)
+    
+  2. Integration Testing 
+  3. End to End Testing 
