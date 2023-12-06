@@ -369,13 +369,14 @@ Advanced Topics
   uncontrolled components [1.25 hours -- with useReducer and useRef]
   Forms [DONE]
   REST API Calls [DONE]
-  HOC [40 mins]
-  Error boundary [10 mins]
+  HOC [DONE]
+  Error boundary [DONE]
   Fragment [DONE]
   StrictMode [DONE]
   Context API [DONE]
   Unit Testing [2-3 hours]
   Redux - Toolkit (2 hours)
+  Build and Deployment [10 mins]
 
 Single Page Apps (SPA)
 ----------------------
@@ -511,3 +512,7 @@ Errors in React JS
   1. Compilation error 
   2. Runtime error
 
+Higher Order Component (HOC) 
+----
+  * it is a function that takes in SourceComponent and returns a New Component 
+  * it is a pattern 
