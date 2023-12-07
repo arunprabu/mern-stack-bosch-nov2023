@@ -33,6 +33,9 @@
 15. Work on deleting user in the url 'users/1' - Http method: DELETE 
     * after 3 seconds of showing succes message -- redirect to users page
 16. Learn about prop-types and implement it in every component that receives props 
+17. learn about testin useReducer and useContext  
+    Refer: https://testing-library.com/docs/example-react-hooks-usereducer/
+          https://testing-library.com/docs/example-react-context
 
 
 Peer Review for 1, 2, 3

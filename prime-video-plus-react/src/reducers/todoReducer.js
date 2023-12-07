@@ -17,7 +17,7 @@ function todoReducer(state = [], action) {
 
   switch (action.type) {
     case "LIST_TODOS":
-      return state;
+      return action.payload;
 
     case "ADD_TODO":
       return [...state, action.payload];

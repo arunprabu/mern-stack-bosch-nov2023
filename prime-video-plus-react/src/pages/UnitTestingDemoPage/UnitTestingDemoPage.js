@@ -4,7 +4,7 @@ const UnitTestingDemoPage = () => {
   return (
     <div>
       <h1>Unit Testing Demo</h1>
-      <CompanyInfo />
+      <CompanyInfo foundedYear="1886" />
     </div>
   );
 }

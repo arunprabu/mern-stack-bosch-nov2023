@@ -12,7 +12,7 @@ const TodosPage = () => {
   useEffect(() => {
     // Let's load the todos after initial rendering
     todoDispatch({
-      type: "LIST_TODOS",
+      type: "LIST_TODOS"
     });
   }, []);
 

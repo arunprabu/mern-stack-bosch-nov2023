@@ -532,7 +532,7 @@ Dev
   Test Cases: 
     1. add should work with only number -- it can receive params in the form of numbers 
     2. add must return number 
-    3. add button should be disabled if other than numbers entered 
+    3. add button should be disabled if other than numbers are entered 
 
     function add(a, b){
       if(typeof a === 'number' && typeof b === 'number'){
@@ -547,14 +547,14 @@ Dev
 
 Modern Approach 
 ====  
-  Dev should write test cases => Dev should write the code => (TOOLS) => (0 bugs) => Deployment 
+  Dev should write test cases => Dev should write the functionality code => (TOOLS) => (0 bugs) => Deployment 
 
 Automated Testing 
 -----
   0. Static Type Checking (prop-types or typescript)
   1. Unit Testing 
       * testing the functional code by writing some code
-      * testing tiny, independent unit of the code
+      * testing tiny, independent unit of the component
       * testing the component in isolation (w/o connecting to rest api) 
       * tools: 
         1. JEST (Unit testing framework and also a TEST RUNNER), 
@@ -562,3 +562,15 @@ Automated Testing
     
   2. Integration Testing 
   3. End to End Testing 
+
+Testing Pattern:
+----------
+  AAA (Arrange, Act, Assert)
+
+Unit Testing Topics 
+------
+  Quick File walkthrough [DONE]
+  Testing JSX [DONE]
+  Testing Props [DONE]
+  Testing States and Events [DONE]
+  Testing Reducer and Context [TODO]
