@@ -75,7 +75,7 @@ Webapps
       Disadv 
       ----
         1. NOT Search Engine Friendly (can be fixed -- We Won't do)
-        2. Initial Loading will take longer (can be fixed -- We will do)
+        2. Initial Loading will take longer (can be fixed -- We fixed it with lazy loading)
 
 
 Browser
@@ -374,9 +374,11 @@ Advanced Topics
   Fragment [DONE]
   StrictMode [DONE]
   Context API [DONE]
-  Unit Testing [2-3 hours]
+  Unit Testing [DONE]
+  Build and Deployment [DONE]
+  Lazy Loading and Suspense [DONE]
+
   Redux - Toolkit (2 hours)
-  Build and Deployment [10 mins]
 
 Single Page Apps (SPA)
 ----------------------
@@ -574,3 +576,19 @@ Unit Testing Topics
   Testing Props [DONE]
   Testing States and Events [DONE]
   Testing Reducer and Context [TODO]
+
+
+====
+Build and Deployment
+-----
+  Build Checklist 
+  ----
+    1. check console for any errors.  
+    2. check console for any warnings. 
+    3. remove all console.logs 
+    4. look for run time errors. if anything occurs, fix the issue. 
+    5. look for 'Compiled with warnings' errors in command prompt. if found, fix them too
+
+  How to take a build?
+  ---
+    npm run build 
