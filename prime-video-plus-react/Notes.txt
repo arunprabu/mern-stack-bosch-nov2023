@@ -485,8 +485,8 @@ Cross Component Communication
       using props, passing callback fn as prop to the child comp 
 
   3. Any to Any Component Communication 
-      3.1 using Context API of React JS [TO LEARN]
-      3.2 using Redux-Toolkit [TO LEARN] / Zustand / MobX / Jotai / Recoil / Flux
+      3.1 using Context API of React JS [DONE]
+      3.2 using Redux-Toolkit [TO LEARN] / Redux / Zustand / MobX / Jotai / Recoil / Flux
 
 ======
 Hooks
