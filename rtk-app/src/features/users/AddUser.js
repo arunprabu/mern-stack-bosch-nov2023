@@ -1,7 +1,19 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { addUserAsync } from './usersSlice';
 
 const AddUser = () => {
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: ''
+  });
+
+  const usersState = useSelector((store) => {
+    return store.users;
+  });
+
+  const dispatch = useDispatch();
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -18,6 +30,7 @@ const AddUser = () => {
     event.preventDefault();
     console.log(formData);
     // let's submit the form data to the rest api
+    dispatch(addUserAsync(formData));
   };
   
   return (
@@ -64,7 +77,7 @@ const AddUser = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          Submit
+          {usersState.isLoading? 'Submitting...': 'Submit'}
         </button>
       </form>
     </>

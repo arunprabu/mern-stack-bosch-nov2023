@@ -31,6 +31,20 @@ export const fetchUsersAsync = createAsyncThunk(
   }
 );
 
+// Let's add user - async
+export const addUserAsync = createAsyncThunk(
+  "users/addUser",
+  async (addUserFormData) => {
+    console.log(addUserFormData); // form data coming from component
+    const response = await axios.post(
+      "https://jsonplaceholder.typicode.com/users",
+      addUserFormData
+    );
+    console.log(response);
+    return response.data; // this will be the payload of action obj
+  }
+);
+
 // using createSlice function to create the slice
 const usersSlice = createSlice({
   name: "users", // slice name
@@ -59,6 +73,23 @@ const usersSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.status = "Unable to fetch users. Try again later!";
+      })
+      .addCase(addUserAsync.pending, (state) => {
+        // state is the store data of this feature
+        state.isLoading = true;
+      })
+      .addCase(addUserAsync.fulfilled, (state, action) => {
+        // state is the store data of this feature
+        // action is an object - will have the payload
+        state.isLoading = false;
+        state.userList = [...state.userList, action.payload];
+      })
+      .addCase(addUserAsync.rejected, (state, action) => {
+        // state is the store data of this feature
+        // action is an object - will have the payload
+        state.isLoading = false;
+        state.isError = true;
+        state.status = "Unable to Add user. Try again later!";
       });
   },
 });
