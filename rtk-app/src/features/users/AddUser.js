@@ -3,12 +3,6 @@ import React, { useState } from 'react'
 const AddUser = () => {
   const [formData, setFormData] = useState({});
 
-  const handleAddUser = (event) => {
-    event.preventDefault();
-    console.log(formData);
-    // let's submit the form data to the rest api
-  };
-
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     console.log(name);
@@ -17,6 +11,13 @@ const AddUser = () => {
       ...formData,
       [name]: value,
     });
+  };
+
+  // submit handler
+  const handleAddUser = (event) => {
+    event.preventDefault();
+    console.log(formData);
+    // let's submit the form data to the rest api
   };
   
   return (

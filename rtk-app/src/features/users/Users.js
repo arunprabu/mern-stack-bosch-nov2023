@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AddUser from "./AddUser";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchUsersAsync } from "./usersSlice";
 
 const Users = () => {
+  // Let's subscribe to the store data
+  const usersState = useSelector((store) => {
+    // the entire store data you can avail
+    // we need only users data from store
+    return store.users;
+  });
+  console.log(usersState);
+
+  // let's prepare to dispatch an action
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUsersAsync());
+  }, []);
+
   return (
     <div className="row">
       <h1>User Management</h1>
@@ -12,23 +29,30 @@ const Users = () => {
       <div className="col-md-8">
         <h2>List Users</h2>
         {/* Showing the loader */}
-        {<div className="spinner spinner-border"></div>}
+        {usersState.isLoading && <div className="spinner spinner-border"></div>}
 
-        {/* is error occurred */}
-        {<div className="alert alert-danger">some error occurred</div>}
-        {/* is we get the usersList data */}
+        {/* if error occurred */}
+        {usersState.isError && (
+          <div className="alert alert-danger">{usersState.status}</div>
+        )}
+
+        {/* if we get the usersList data */}
         <div className="row">
-          <div className="col-md-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">John</h5>
-                <h6 className="card-subtitle mb-2 text-body-secondary">
-                  E-Mail: j@k.com
-                </h6>
-                <p className="card-text">Phone: 452134567</p>
+          {usersState?.userList?.map((user) => {
+            return (
+              <div className="col-md-4" key={user.id}>
+                <div className="card">
+                  <div className="card-body">
+                    <h5 className="card-title">{user.name}</h5>
+                    <h6 className="card-subtitle mb-2 text-body-secondary">
+                      E-Mail: {user.email}
+                    </h6>
+                    <p className="card-text">Phone: {user.phone}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>
