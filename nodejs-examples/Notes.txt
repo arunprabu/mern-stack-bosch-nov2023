@@ -1,0 +1,87 @@
+NodeJS 
+-----
+  * Runtime 
+  * JS => (NodeJs Runtime) => Machine Language
+
+
+  Back End App 
+  ------
+    ~10 Examples 
+    App #1: SSR App using NodeJS (40 mins)
+    App #2: REST API using ExpressJS
+            * SSR App using ExpressJS
+            * CRUD App (User Management)
+              * Add User (POST)
+              * List Users (GET)
+              * User Details (GET)
+              * Edit User (PUT/PATCH)
+              * Delete User (DELETE)
+            * DB Connectivity (mongo[JS] and Mysql [SQL])
+            * Authentication
+              * Encrypt the password 
+              * Never store the encrypted password 
+              * Storing only salt and hash
+
+JS 
+---
+  * released in 1995 
+  * scripting language
+  * JS Engine would execute (JS engine was part of the browser)
+
+Browser Core 
+----- 
+  HTML Renderer + CSS Parser + JS Engine 
+
+NodeJS History 
+----
+  * Netscape Navigator by Netscape in 1994 (NOT Open Sourced) -- Stopped around ~2007-08
+  * Opera by Opera in 1995 (NOT Open Sourced)
+  * Internet Explore by MS in 1995 (NOT Open Sourced)
+  * Safari by Apple in 2003 (Webkit Core - Open Sourced)
+  * Firefox Browser by Mozilla in 2004 (Mozilla Core - Open Sourced)
+  * Chrome Browser by Google (Open Sourced Chromium Core = Webkit + Mozilla + V8 JS Engine) in 2008 
+    * V8 JS Engine was released as OSS 
+    * V8 JS Engine would convert JS into machine language and execute the code 
+  * NodeJs was developed using V8 Engine and released as installable runtime in many platforms in 2009 
+  * Opera chose Chromium Core
+  * Edge chose Chromium Core
+  * Brave chose Chromium Core
+  * Vivaldi chose Chromium Core
+
+Types of Apps 
+------
+  Front End Apps, Back End Apps, Mobile / Tablet Apps, Desktop Apps, TV Apps, Smartwatch Apps 
+
+Front End Apps
+-----
+  HTML, CSS, JavaScript 
+
+Back End Apps
+-----
+  Java, DotNet, PHP, Perl, Python, Ruby, JavaScript (NodeJS / ExpressJS)
+
+Mobile / Tablet Apps 
+------  
+  Java (Kotlin), Swift, DotNet, JavaScript (Ionic or React Native)
+
+Desktop Apps
+-----
+  C, C++, Java, DotNet, Python, JavaScript (Electron JS)
+
+TV Apps
+----
+  Java (Kotlin), Swift, DotNet, JavaScript (React or React Native)
+
+Database 
+-----
+  SQL, JavaScript (MongoDB, and many RDBMS)
+
+
+
+If NodeJs has to become Server Side language, it should deal with the following
+-----
+  1. It should have Access to File System 
+  2. Receive Http Req and Process Http Responses 
+  3. Connect to Databases 
+  4. Be faster 
+
