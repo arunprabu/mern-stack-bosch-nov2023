@@ -3,7 +3,6 @@ NodeJS
   * Runtime 
   * JS => (NodeJs Runtime) => Machine Language
 
-
   Back End App 
   ------
     ~10 Examples 
@@ -80,8 +79,40 @@ Database
 
 If NodeJs has to become Server Side language, it should deal with the following
 -----
-  1. It should have Access to File System 
-  2. Receive Http Req and Process Http Responses 
+  1. It should have Access to File System [DONE]
+  2. Receive Http Req and Process Http Responses [DONE]
   3. Connect to Databases 
-  4. Be faster 
+  4. Be faster [DONE]
 
+Digital Communication
+-----------
+  Simplex
+    Transmitter => Receiver 
+    Example: AM Radio, FM Radio
+
+  Half-Duplex
+    Transreceiver ==> Transreceiver
+    Transreceiver <== Transreceiver  
+    Example: Pager, Walkie Talkie, Http
+
+  Duplex / Full-Duplex
+    Transmitter <==> Receiver
+
+Http Protocol
+----
+  Request   ==> Server (10:58:00 AM)
+  Response  <== Server (10:58:01 AM)
+
+  Request   ==> Server (10:58:03 AM)
+  Response  <== Server (10:58:05 AM)
+
+  * Stateless Protocol
+
+
+App #1
+-----
+  REST API 
+
+App #2
+----
+  Video Chat app 

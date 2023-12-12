@@ -1,0 +1,3 @@
+1. handle multiple custom events -- Refer ex6-multiple-events.js for full details [DONE]
+2. in ex10-http.js -- keep the base template in a separate variable and change the content of h1 
+3. in ex11-http.js -- load the html files from 'pages' folder and send the files as response.
