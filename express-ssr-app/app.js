@@ -5,6 +5,7 @@ const port = 3001;
 // GET Home Page -- localhost:3001/
 app.get("/", (req, res) => {
   res.send("Home Page!");
+  // TODO: send the html file in response
 });
 
 // POST Home Page -- localhost:3001/
