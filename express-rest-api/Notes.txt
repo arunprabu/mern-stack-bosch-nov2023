@@ -1,0 +1,129 @@
+User Management App - CRUD App
+---
+  1. Create User 
+      http://localhost:3001/api/users/
+      POST Method 
+
+  2. Listing Users 
+      http://localhost:3001/api/users/
+      GET Method 
+
+  3. User Details
+      http://localhost:3001/api/users/2
+      GET Method 
+
+  4. Update User
+      http://localhost:3001/api/users/2
+      PUT/PATCH Method 
+
+  5. Delete User
+      http://localhost:3001/api/users/2
+      DELETE Method 
+
+MVC 
+---
+  Model (Data)
+  View (Template / anything that is supplied to end users as output)
+  Controller 
+
+
+Database 
+----
+  * place to store data 
+  * many types of databases 
+    1. Relational Database Management System (RDBMS)
+        Examples: Oracle, MySQL, MariaDB, MS SQL, PostgreSQL
+        * data would be stored in tables 
+        * tables will have fixed columns and rows 
+        * suitable for structured data 
+        * schema based
+        * interact with db using Structured Query Language (SQL)
+
+    2. NoSQL Databases (Not Only SQL)
+        Examples: MongoDB, etc 
+        * data would be stored in collections
+        * collections will have documents made up of fields/keys and values
+        * suitable for unstructured data
+        * schema-less 
+        * interact with MongoDB using JavaScript
+
+  * databases will have 2 sides 
+    1. Admin side (creating db, backing up, restoring) [NOT TO LEARN]
+    2. Database Client side (creating data, managing data) [TO LEARN]
+
+  * databases will have server and client 
+  * database server should be running in some port number 
+  * databases will be protected with db credentials (username and password)
+  * to access the db, you need DB clients 
+    1. Shell / Command Line Client [TO LEARN]
+    2. GUI client 
+        (MS SQL Server,  MySQL Workbench, PHPMyAdmin, SQLYog, HeidiSQL, Compass [TO LEARN], Robo 3T [TO LEARN])
+    3. Programming Client [TO LEARN]
+
+----
+How to start the MongoDB Server?
+-----
+  in windows command prompt go into this path 
+  cd C:/Program Files/MongoDB/Server/7.x/bin 
+  
+  Start the server
+  ----
+    mongod 
+
+  Start the shell client
+  -----
+    mongo (may not work in mongodb v6+)
+
+========
+
+MongoDB commands 
+------  
+  to list all dbs (only the dbs with collections will appear)
+    show dbs 
+
+  to know the currently selected db 
+    db 
+
+  to create a new db or to use existing db (it will switch to the db as well)
+    use usersDb
+
+  check the currently selected db
+    db
+
+  to create a collection 
+    db.createCollection('users')
+
+  to see all collections of the selected db 
+    show collections 
+
+  CRUD Operations
+  -----
+    CREATE: Let's insert some data into users collection
+      db.users.insert({name: "John"})
+      db.users.insert({phone: 536475675, city: 'London'})
+      db.users.insert({age: 20})
+      db.users.insert({name: 'Steve', favCities: ["Toronto", "Amsterdam", "Kuala Lumpur"]})
+
+    READ: Let's read the data from db collections 
+      To find all documents 
+        db.users.find()
+
+      to fetch one document 
+        db.users.find({age: 20}) // there may be many docs with age 20
+        db.users.find({name: 'John'}) // there may be many docs with name John
+        db.users.findOne({"_id" : ObjectId("657aa97344f78d81bda5bd77")})
+
+    UPDATE: Let's update the data 
+      db.users.updateOne( { name: "John" },
+      {
+        $set: {
+          name: 'Steve',
+          story: "A teenage girl risks everything–including her life–when she falls in love with a vampire."
+        }
+      })
+
+    DELETE: You explore it here 
+      Refer: https://www.mongodb.com/docs/mongodb-shell/crud/delete/
+      
+
+
