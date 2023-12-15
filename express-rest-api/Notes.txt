@@ -59,6 +59,10 @@ Database
     2. GUI client 
         (MS SQL Server,  MySQL Workbench, PHPMyAdmin, SQLYog, HeidiSQL, Compass [TO LEARN], Robo 3T [TO LEARN])
     3. Programming Client [TO LEARN]
+        For MongoDB: MongoDB driver (official), Mongoose (We will use this)
+
+  If you want to have partially structured data (i.e with schema) 
+    use Mongoose
 
 ----
 How to start the MongoDB Server?
