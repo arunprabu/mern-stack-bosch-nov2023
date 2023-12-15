@@ -130,4 +130,29 @@ MongoDB commands
       Refer: https://www.mongodb.com/docs/mongodb-shell/crud/delete/
       
 
+====
 
+Some Example API Endpoints
+----
+  localhost:3001/api/users   -- GET, POST 
+  localhost:3001/api/users/1   -- GET, UPDATE, DELETE 
+  localhost:3001/api/users?active=true&limit=10&page=1  -- GET   (1-10)
+  localhost:3001/api/users?active=true&limit=10&page=2  -- GET    (11-20)
+
+  localhost:3001/api/employees   -- GET 
+  localhost:3001/api/employees/1   -- GET, UPDATE, DELETE 
+
+  localhost:3001/api/auth/signup    - POST 
+  localhost:3001/api/auth/login     - POST   
+  localhost:3001/api/auth/reset-pw     - POST  [NOT TO LEARN]
+  localhost:3001/api/auth/verify-email?key=3245678o34w3erwrwrt239756345734056345634659347568345634     - GET   [NOT TO LEARN]
+
+  localhost:3001/api/products/   - LIST all products 
+  localhost:3001/api/products/furnitures  - LIST all furnitures  
+  localhost:3001/api/products/furnitures/sofas  - LIST all sofas 
+  localhost:3001/api/products/books  - LIST all books  
+  localhost:3001/api/products/books/fiction  - LIST all fictions 
+
+  localhost:3001/api/products?category=books&subcategory=fiction&sort=price-l-to-h  - LIST all fictions
+
+------

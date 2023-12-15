@@ -9,6 +9,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var employeesRouter = require("./routes/employees");
+var authRouter = require("./routes/auth");
 
 var app = express(); // Creates an Express application. 
 
@@ -28,6 +29,7 @@ app.use('/', indexRouter);
 // REST API Endpoints configuration
 app.use('/api/users', usersRouter);
 app.use('/api/employees', employeesRouter);
+app.use("/api/auth", authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
