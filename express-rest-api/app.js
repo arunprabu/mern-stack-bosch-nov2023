@@ -4,8 +4,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var passport = require('passport');
 
 // custom imports
+require('./config/passport.config'); // passport config is imported
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var employeesRouter = require("./routes/employees");
@@ -22,6 +24,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser()); 
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Before all urls -- let's initialize passport
+// Setting up auth middleware
+passport.initialize();
 
 // URLs are configured
 app.use('/', indexRouter);

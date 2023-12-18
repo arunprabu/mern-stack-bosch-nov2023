@@ -156,3 +156,8 @@ Some Example API Endpoints
   localhost:3001/api/products?category=books&subcategory=fiction&sort=price-l-to-h  - LIST all fictions
 
 ------
+
+Refer for Auth:
+https://github.com/arunprabu/nodejs-expjs-sep2022/blob/master/user-management-rest-api/utils/auth.util.js
+https://github.com/arunprabu/nodejs-expjs-sep2022/blob/master/user-management-rest-api/routes/api/users.js
+
