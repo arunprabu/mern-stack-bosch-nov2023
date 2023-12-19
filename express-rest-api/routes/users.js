@@ -16,7 +16,7 @@ router.get("/", getUsers);
 router.post("/", authUtil.required, createUser);
 
 /* GET users/:id -- URL Param */  
-router.get('/:id', getUserById);
+router.get('/:id', authUtil.optional, getUserById);
 
 /* UPDATE users/:id - URL Param */
 router.put("/:id", updateUserById);
