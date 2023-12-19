@@ -161,3 +161,24 @@ Refer for Auth:
 https://github.com/arunprabu/nodejs-expjs-sep2022/blob/master/user-management-rest-api/utils/auth.util.js
 https://github.com/arunprabu/nodejs-expjs-sep2022/blob/master/user-management-rest-api/routes/api/users.js
 
+
+Build and Deployment 
+-------------
+  If it is a JAva Project -- you need to take a build 
+    Java => javac => (bytecode) => JRE => (Machine Language)
+
+  But, in NodeJS -- we don't need to take a build -- simply deploy
+                     JavaScript => NodeJsRE => (Machine Language)
+
+                    
+  Deployment Steps 
+  -----
+    1. copy the entire project project repo without node_modules folder
+    2. paste it in a machine in which you want to deploy this app 
+    3. Install NodeJS (appropriate version) in the deployable machine 
+    4. start the db server 
+    5. go to the command prompt and locate the project 
+    6. npm i 
+    7. npm start 
+
+------------

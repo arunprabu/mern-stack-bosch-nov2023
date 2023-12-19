@@ -1,0 +1,34 @@
+Digital Communication
+-----------
+  Simplex
+    Transmitter => Receiver 
+    Examples: AM Radio, FM Radio
+
+  Half-Duplex
+    Transreceiver ==> Transreceiver
+    Transreceiver <== Transreceiver  
+    Example: Pager, Walkie Talkie, Http
+
+  Duplex / Full-Duplex
+    Transreceiver <==> Transreceiver
+    Example: WebSocket
+
+Http Protocol
+----
+  Client   ==> Server (10:58:00 AM)
+  Client   <== Server (10:58:01 AM)
+
+  Request   ==> Server (10:58:03 AM)
+  Response  <== Server (10:58:05 AM)
+
+Http Long Polling 
+----
+  Client   ==> Server (10:58:00 AM)
+  (Server will not send a res immediately. Will wait till it gets new updated info)
+  Client   <== Server (10:58:10 AM)
+
+WebSockets
+------
+  * WebSocket is a full-duplex communication protocol that enables real-time communication 
+    between the client and server over a single, long-lived connection. 
+
