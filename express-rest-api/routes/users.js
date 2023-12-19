@@ -5,13 +5,15 @@ const {
   getUserById,
   getUsers,
 } = require("../controllers/users.contoller");
+const authUtil = require('../utils/authUtil');
+
 var router = express.Router();
 
 /* GET users. */
 router.get("/", getUsers);
 
 /* POST users */
-router.post("/", createUser);
+router.post("/", authUtil.required, createUser);
 
 /* GET users/:id -- URL Param */  
 router.get('/:id', getUserById);
