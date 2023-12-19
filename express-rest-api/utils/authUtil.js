@@ -20,6 +20,7 @@ const getTokenFromHeaders = (req) => {
 
 const auth = {
   required: jwt({
+    // this is the secret key with which we generated token -- refer account.model.js
     secret: "NodeJS is better than Java",
     algorithms: ["HS256"],
     userProperty: "payload",
