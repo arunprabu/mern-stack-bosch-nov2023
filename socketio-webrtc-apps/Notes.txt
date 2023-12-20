@@ -32,3 +32,15 @@ WebSockets
   * WebSocket is a full-duplex communication protocol that enables real-time communication 
     between the client and server over a single, long-lived connection. 
 
+WebRTC
+-----
+  some code in video-chat.html (client side codes)
+
+
+  some code in app.js (server side codes)
+
+  TO CHECK THIS --- you need https and access the url from two different devices 
+  Refer: https://medium.com/etc-a2z/setting-up-https-for-localhost-7e9a18253ca
+======
+
+Scaling NodeJs app.

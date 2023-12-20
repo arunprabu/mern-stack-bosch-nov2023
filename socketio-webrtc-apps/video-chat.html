@@ -1,26 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Socket.IO Based Text Chat</title>
-</head>
-<body>
-  
-  <nav>
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/text-chat">Text Chat</a>
-      </li>
-      <li>
-        <a href="/video-chat">Video Chat</a>
-      </li>
-    </ul>
-  </nav>
-  
-  <h1>Welcome to Socket.IO + WebRTC Based Video Chat App</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.IO Based Text Chat</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/text-chat">Text Chat</a>
+        </li>
+        <li>
+          <a href="/video-chat">Video Chat</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>Welcome to Socket.IO + WebRTC Based Video Chat App</h1>
+    <h2>Video Chat</h2>
+    <video id="localVideo" autoplay></video>
+    <video id="remoteVideo" autoplay></video>
+
+    <!-- Loading Socket.IO client script -->
+    <script
+      src="https://cdn.socket.io/4.7.2/socket.io.min.js"
+      integrity="sha384-mZLF4UVrpi/QTWPA7BjNPEnkIfRFn4ZEO3Qt/HFklTJBj/gBOV8G3HcKn4NfQblz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // get permission to access my camera, mic
+      // Get the local video stream
+      navigator.mediaDevices
+        .getUserMedia({ video: true, audio: true })
+        .then((stream) => {
+          // if video, audio permission granted
+          const localVideo = document.getElementById("localVideo");
+          localVideo.srcObject = stream;
+          // add local stream to peer connection
+        })
+        .catch((error) => {
+          // if video, audio permission denied
+          console.log(error);
+        });
+
+      // socket io logic
+      const socket = io();
+      socket.on('offer', (offer) => {
+        peerConnection.setRemoteDescription(new RTCSessionDescription(offer))
+        .then(() => {
+          return peerConnection.createAnswer();
+        })
+        .then((answer) => {
+          return peerConnection.setLocalDescription(answer);
+        })
+        .then((answer) => {
+          socket.emit('answer', answer);
+        })
+      });
+
+      socket.on('ice-candidate', (candidate) => {
+        peerConnection.addIceCandidate(new RTCIceCandidate(candidate))
+        .catch(error => {
+          console.log(error);
+        })
+      })
+
+      // webrtc logic
+      // setting up stun server url
+      const configuration = {
+        iceServers: [
+          {
+            urls: "stun:stun.l.google.com:19302",
+          },
+        ],
+      };
+      // initializing WebRTC components
+      const peerConnection = new RTCPeerConnection(configuration);
+
+      // Listen for ICE Candidates and send them to the other peer
+      peerConnection.onicecandidate = (event) => {
+        console.log(event);
+        if(event.candidate) {
+          // emit the event thru socket
+          socket.emit('ice_candidate', event.candidate);
+        }
+      }
+
+      // Listen for remote stream and display in remoteVideo
+      peerConnection.ontrack = (event) => {
+        // if video, audio permission granted
+        const remoteVideo = document.getElementById("remoteVideo");
+        remoteVideo.srcObject = event.streams[0];
+      }
+
+      // The createOffer() method of the RTCPeerConnection interface initiates the creation of
+      // an SDP offer for the purpose of starting a new WebRTC connection to a remote peer.
+      peerConnection.createOffer()
+      .then((offer) => {
+        console.log(offer);
+        // setLocalDescription() changes the local description associated with the connection. 
+        // This description specifies the properties of the local end of the connection, including the media format. 
+        return peerConnection.setLocalDescription(offer)
+      })
+      .then(() => {
+        // will emit the event 'offer' thru socket
+        socket.emit('offer', peerConnection.localDescription)
+      })
+    </script>
+  </body>
 </html>
